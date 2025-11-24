@@ -1,0 +1,236 @@
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Paleta de Cores */
+    --primary-color: hsl(276, 69%, 66%); /* Roxo claro */
+    --secondary-color: hsl(310, 65%, 31%); /* Roxo escuro */
+    --bg-dark: #121214; /* Fundo quase preto */
+    --bg-card: #202024; /* Fundo dos cartões */
+    --text-color: #e1e1e6; /* Texto claro */
+    --gradient: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho dos elementos */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container principal para centralizar o conteúdo */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER & NAVEGAÇÃO --- */
+.main-header {
+    background-color: var(--bg-card);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    background: var(--gradient);
+    -webkit-background-clip: text; /* Faz o gradiente ficar NO TEXTO, webKit é um motor de renderização gráfica pra navegadores. Por existirem muitos navegadores, e cada um com sua especificação, às vezes é necessário adicionar esses prefixos para que um estilo CSS funcione em todos.*/ 
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px); /* Leve pulinho ao passar o mouse */
+}
+
+/* --- ESTILOS GERAIS --- */
+img {
+    max-width: 100%; /* Imagem nunca estoura o tamanho da tela */
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.section-padding {
+    padding: 60px 0;
+    border-bottom: 1px solid #333;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+/* --- SEÇÃO HERO (INÍCIO) --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+    gap: 30px;
+    flex-wrap: wrap; /* Responsivo */
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* --- NOTÍCIAS (Card) --- */
+.news-card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap-reverse; /* Imagem vai pra cima no celular */
+}
+
+.news-text { flex: 1; }
+.news-img { flex: 1; }
+
+.link-destaque {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- GALERIA (GRID) --- */
+.gallery-grid {
+    display: grid;
+    /* Cria colunas automáticas que cabem na tela */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px; /* Altura fixa para ficarem iguais */
+    object-fit: cover; /* Corta a imagem para preencher sem esticar */
+    transition: transform 0.3s;
+    border: 2px solid transparent;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
+}
+
+/* --- FORMULÁRIO --- */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    margin-top: 40 px;
+    font-size: 0.9rem;
+}
+
+.cards-news{
+    padding: 20px;
+}
+
+.img-card-news{
+    display: flex;
+    align-items: center;
+}
+
+.chat{
+    padding: 20px;
+}
+
+.chat h2{
+    text-transform: uppercase;
+    background: var(--gradient);
+    -webkit-background-clip: text; /* Faz o gradiente ficar NO TEXTO, webKit é um motor de renderização gráfica pra navegadores. Por existirem muitos navegadores, e cada um com sua especificação, às vezes é necessário adicionar esses prefixos para que um estilo CSS funcione em todos.*/ 
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de jogos digitais e notícias do mundo gamer">
+    <title>Blog Games News</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/5f0d2fae4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>Games News <i class="fa-solid fa-gamepad"></i></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house-laptop"></i> Início</a></li>
+                <li><a href="noticias.html"><i class="fa-solid fa-newspaper"></i> Notícias</a></li>
+                <li><a href="comunidade.html"><i class="fa-solid fa-comment"></i> Comunidade</a></li>
+                <li><a href="#galeria"><i class="fa-solid fa-image"></i> Galeria</a></li>
+                <li><a href="#contato"><i class="fa-solid fa-circle-info"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo ao mundo dos Games</h2>
+                <p>Games News é seu portal de atualização. Saiba os primeiros lançamentos e conecte-se com comunidades.</p>
+                <a href="#noticias" class="btn">Saiba Mais</a>
+            </div>
+            <div class="hero-img">
+                <img src="img/gameplay.jpg" alt="Pessoa jogando video game">
+            </div>
+        </section>
+
+        <section id="noticias" class="section-padding">
+            <h2 class="section-title">Últimas Notícias</h2>
+            
+            <div class="news-card">
+                <div class="news-text">
+                    <h3>Novidades no mercado</h3>
+                    <p>As notícias de última hora incluem o lançamento da demo de Little Nightmares III e polêmicas entre Sony e Tencent. A Microsoft anunciou novos preços para o Xbox Series X|S nos EUA.</p>
+                    <a href="#" class="link-destaque">Ler matéria completa &rarr;</a>
+                </div>
+                <div class="news-img">
+                    <img src="img/gameplay2.jpg" alt="Duas pessoas jogando">
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-padding">
+            <h2 class="section-title">Galeria dos Leitores</h2>
+            <p class="subtitle">Gameplay e muita diversão!</p>
+            
+            <div class="gallery-grid">
+                <img src="img/gameplay4.jpg" alt="Mulher jogando competitivo">
+                <img src="img/gameplay3.jpg" alt="Criança jogando">
+                <img src="img/gameplay2.jpg" alt="Duas pessoas jogando">
+                <img src="img/gameplay5.jpg" alt="Setup gamer">
+            </div>
+        </section>
+
+        <section id="contato" class="section-padding contact-section">
+            <h2 class="section-title">Fale Conosco</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Games News - Desenvolvido por Karina Silva</p>
+    </footer>
+
+</body>
+</html>
